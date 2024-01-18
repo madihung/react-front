@@ -6,7 +6,7 @@ const Users = () => {
         {
             id: 'u1', 
             name: 'Max Schwarz', 
-            image: '', 
+            image:'https://i.kym-cdn.com/photos/images/newsfeed/002/701/139/063.jpg',
             places: 3
         }
     ];
