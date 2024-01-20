@@ -8,12 +8,7 @@ import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 const MainNavigation = props => {
     return <MainHeader>
-        <button className="main-navigation__btn">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-        <button className="main-navigation__title">
+        <button className="main-navigation__menu-btn">
             <span></span>
             <span></span>
             <span></span>
@@ -21,7 +16,7 @@ const MainNavigation = props => {
         <h1 className="main-navigation__title">
             <Link to="/">Your Places</Link>
         </h1>
-        <nav>
+        <nav className="main-navigation__header-nav">
             <NavLinks />
         </nav>
     </MainHeader>
