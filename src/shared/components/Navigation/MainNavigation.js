@@ -2,7 +2,7 @@ import React from "react";
 import './MainNavigation.css'
 
 import MainHeader from "./MainHeader";
-import { NavLinks } from "react-router-dom/cjs/react-router-dom.min";
+import NavLinks from "./NavLinks";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 

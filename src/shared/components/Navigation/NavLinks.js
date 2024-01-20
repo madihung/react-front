@@ -19,3 +19,5 @@ const NavLinks = props => {
         </li>
     </u1>
 };
+
+export default NavLinks;
