@@ -1,9 +1,12 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 
 import './SideNav.css';
 
 const SideNav = props => {
-    return <aside classNAme="side-nav">{props.children}</aside>
+    const content = <aside classNAme="side-nav">{props.children}</aside>;
+
+    return ReactDOM.createPortal(content, document.getElementById('drawer-hook'));
 };
 
-export default SideNav
+export default SideNav;
