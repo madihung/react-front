@@ -1,6 +1,8 @@
 import React from "react";
 import './MainNavigation.css'
+
 import MainHeader from "./MainHeader";
+import { NavLinks } from "react-router-dom/cjs/react-router-dom.min";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 
@@ -17,12 +19,10 @@ const MainNavigation = props => {
             <span></span>
         </button>
         <h1 className="main-navigation__title">
-            <Link to="/">
-            Your Places
-            </Link>
+            <Link to="/">Your Places</Link>
         </h1>
         <nav>
-            ...
+            <NavLinks />
         </nav>
     </MainHeader>
 };
