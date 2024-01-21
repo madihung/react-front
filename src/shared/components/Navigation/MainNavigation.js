@@ -8,17 +8,24 @@ import './MainNavigation.css'
 
 
 const MainNavigation = props => {
+    const [drawerIsOpen, setDrawerIsOpen] = useState(false)
+
+    const openDrawer = () => {
+        setDrawerIsOpen(true);
+    };
 
     return (
         // cant return two root elements unless a fragment wapper is added
         <React.Fragment>
-            <SideNav>
-                <nav className="main-navigation__side-nav">
-                    <NavLinks />
-                </nav>
-            </SideNav>
+            {drawerIsOpen && (
+                <SideNav>
+                    <nav className="main-navigation__side-nav">
+                        <NavLinks />
+                    </nav>
+                </SideNav>
+            )}
             <MainHeader>
-                <button className="main-navigation__menu-btn">
+                <button className="main-navigation__menu-btn" onClick={openDrawer}>
                     <span></span>
                     <span></span>
                     <span></span>
