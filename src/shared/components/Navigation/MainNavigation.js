@@ -1,27 +1,38 @@
 import React, {useState} from "react";
-import './MainNavigation.css'
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 import MainHeader from "./MainHeader";
 import NavLinks from "./NavLinks";
 import SideNav from "./SideNav";
-import { Link } from "react-router-dom/cjs/react-router-dom.min";
+import Backdrop from "../UIElements/Backdrop";
+import './MainNavigation.css'
 
 
 const MainNavigation = props => {
     const [drawerIsOpen, setDrawerIsOpen] = useState(false);
+    const openDrawer = () => {
+        setDrawerIsOpen(true);
+    };
+
+    const closeDrawer = () => {
+        setDrawerIsOpen(false);
+    };
 
     return (
         // cant return two root elements unless a fragment wapper is added
         <React.Fragment>
-            {drawerIsOpen ? (
+            {drawerIsOpen && 
+            <>
+                <Backdrop onClick={closeDrawer} />
                 <SideNav>
                     <nav className="main-navigation__side-nav">
                         <NavLinks />
                     </nav>
                 </SideNav>
-            ) : null}
+            </>
+            }
             <MainHeader>
-                <button className="main-navigation__menu-btn">
+                <button className="main-navigation__menu-btn" onClick={openDrawer}>
                     <span></span>
                     <span></span>
                     <span></span>
