@@ -4,6 +4,7 @@ import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import MainHeader from "./MainHeader";
 import NavLinks from "./NavLinks";
 import SideNav from "./SideNav";
+import Backdrop from "../UIElements/Backdrop";
 import './MainNavigation.css'
 
 
@@ -14,9 +15,14 @@ const MainNavigation = props => {
         setDrawerIsOpen(true);
     };
 
+    const closeDrawer = () => {
+        setDrawerIsOpen(false);
+    };
+
     return (
         // cant return two root elements unless a fragment wapper is added
         <React.Fragment>
+            {drawerIsOpen && <Backdrop onClick={closeDrawer} />}
             {drawerIsOpen && (
                 <SideNav>
                     <nav className="main-navigation__side-nav">
