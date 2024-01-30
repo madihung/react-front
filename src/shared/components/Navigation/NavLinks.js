@@ -4,7 +4,7 @@ import {NavLink} from 'react-router-dom';
 import './NavLinks.css'
 
 const NavLinks = props => {
-    return <u1 className="nav-links">
+    return <ul className="nav-links">
         <li>
             <NavLink to="/" exact>ALL USERS</NavLink>
         </li>
@@ -17,7 +17,7 @@ const NavLinks = props => {
         <li>
             <NavLink to="/auth">AUTHENTICATE</NavLink>
         </li>
-    </u1>
+    </ul>
 };
 
 export default NavLinks;
