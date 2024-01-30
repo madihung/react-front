@@ -17,7 +17,7 @@ const SideNav = props => {
             unmountOnExit
             // children={asideContent}
         >
-            <aside className="side-drawer">{props.children}</aside>
+            <aside className="side-nav">{props.children}</aside>
         </CSSTransition>
 
     );
